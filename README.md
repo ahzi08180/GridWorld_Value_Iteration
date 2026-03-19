@@ -19,21 +19,24 @@
 - **Frontend**: Vanilla JavaScript, CSS3 (Modern HSL palette), HTML5
 
 ## 如何在本機執行
-1. **複製專案**：
+### 方法一：使用 Flask (傳統版)
+1. **安裝依賴**：`pip install -r requirements.txt`
+2. **啟動伺服器**：`python app.py`
+3. **瀏覽網頁**：`http://127.0.0.1:5000`
+
+### 方法二：使用 Streamlit (推薦用於雲端部署)
+1. **啟動 App**：
    ```bash
-   git clone https://github.com/ahzi08180/GridWorld_Random.git
-   cd GridWorld_Random
+   streamlit run streamlit_app.py
    ```
-2. **安裝依賴**：
-   ```bash
-   pip install -r requirements.txt
-   ```
-3. **啟動伺服器**：
-   ```bash
-   python app.py
-   ```
-4. **瀏覽網頁**：
-   開啟瀏覽器並輸入 `http://127.0.0.1:5000`
+2. **瀏覽網頁**：自動開啟 `http://localhost:8501`
+
+## 雲端部署 (Streamlit Cloud)
+此專案已相容於 Streamlit Cloud：
+1. 將程式碼推送到 GitHub。
+2. 在 [Streamlit Cloud](https://share.streamlit.io/) 點擊 "New app"。
+3. 選擇此倉庫與 `streamlit_app.py`。
+4. 點擊 "Deploy" 即可在線觀看！
 
 ## 數學原理
 本專案使用**迭代策略評估 (Iterative Policy Evaluation)**：
